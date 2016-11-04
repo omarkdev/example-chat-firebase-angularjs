@@ -1,0 +1,20 @@
+{
+  "name": "example-chat-firebase-angularjs",
+  "version": "1.0.0",
+  "description": "Exemple chat with firebase and angularjs",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/omarkdev/example-chat-firebase-angularjs.git"
+  },
+  "keywords": [
+    "CHAT",
+    "FIREBASE",
+    "ANGULARJS"
+  ],
+  "author": "Marcos Felipe @omarkdev",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/omarkdev/example-chat-firebase-angularjs/issues"
+  },
+  "homepage": "https://github.com/omarkdev/example-chat-firebase-angularjs#readme"
+}
