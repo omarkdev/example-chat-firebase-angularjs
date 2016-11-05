@@ -19,6 +19,23 @@ gulp.task('js-vendor', function(){
         .pipe(connect.reload());
 });
 
+
+gulp.task('js-angular', function(){
+    var filesAngular = [
+        'app/_init.js',
+        'app/routes.js',
+        'app/Factories/*.js',
+        'app/Services/*.js',
+        'app/Controllers/*.js'
+    ];
+
+    return gulp.src(filesAngular)
+        .pipe(concat('app-concated.js'))
+        .pipe(rename('app.min.js'))
+        .pipe(uglify())
+        .pipe(gulp.dest('public/assets/js/'));
+});
+
 gulp.task('connect', function(){
     connect.server({
         root: 'public',
