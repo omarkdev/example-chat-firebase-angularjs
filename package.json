@@ -23,5 +23,11 @@
     "gulp-connect": "^5.0.0",
     "gulp-rename": "^1.2.2",
     "gulp-uglify": "^2.0.0"
+  },
+  "dependencies": {
+    "angular": "^1.5.8",
+    "angular-route": "^1.5.8",
+    "angularfire": "^2.1.0",
+    "firebase": "^3.5.3"
   }
 }
