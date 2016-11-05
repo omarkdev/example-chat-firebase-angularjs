@@ -42,3 +42,12 @@ gulp.task('connect', function(){
         port: 4000
     });
 });
+
+gulp.task('default', ['js-vendor', 'js-angular'], function(){
+    gulp.watch([
+        'app/*.js',
+        'app/**/*.js'
+    ], ['js-angular']);
+
+    gulp.start('connect');
+});
