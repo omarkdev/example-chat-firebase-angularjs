@@ -1,6 +1,12 @@
 $app.controller("WelcomeController", [
-    '$scope',
-    function($scope){
+    '$scope', 'UserFactory',
+    function($scope, UserFactory){
+        $scope.userLogin = function(){
+            var nickUser = $scope.user.nick;
 
+            UserFactory.set({
+                nick: nickUser
+            });
+        }
     }
 ]);
