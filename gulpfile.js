@@ -42,7 +42,7 @@ gulp.task('connect', function(){
     });
 });
 
-gulp.task('default', ['js-vendor', 'js-angular'], function(){
+gulp.task('default', ['js-angular'], function(){
     gulp.watch([
         'app/*.js',
         'app/**/*.js'
