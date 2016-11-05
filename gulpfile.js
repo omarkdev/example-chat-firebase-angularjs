@@ -22,7 +22,7 @@ gulp.task('js-vendor', function(){
 
 gulp.task('js-angular', function(){
     var filesAngular = [
-        'app/_init.js',
+        'app/app.js',
         'app/routes.js',
         'app/Factories/*.js',
         'app/Services/*.js',
@@ -32,7 +32,6 @@ gulp.task('js-angular', function(){
     return gulp.src(filesAngular)
         .pipe(concat('app-concated.js'))
         .pipe(rename('app.min.js'))
-        .pipe(uglify())
         .pipe(gulp.dest('public/assets/js/'));
 });
 
