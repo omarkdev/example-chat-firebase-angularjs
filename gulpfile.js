@@ -15,5 +15,13 @@ gulp.task('js-vendor', function(){
         .pipe(concat('vendor-concated.js'))
         .pipe(rename('vendor.min.js'))
         .pipe(uglify())
-        .pipe(gulp.dest('public/assets/js/'));
+        .pipe(gulp.dest('public/assets/js/'))
+        .pipe(connect.reload());
+});
+
+gulp.task('connect', function(){
+    connect.server({
+        root: 'public',
+        port: 4000
+    });
 });
