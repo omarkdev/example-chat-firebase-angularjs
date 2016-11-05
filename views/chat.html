@@ -1,1 +1,9 @@
 <h1>Olá {{ user.nick }}</h1>
+<div>
+    <div ng-repeat="message in messages">
+        <h3>{{ message.user.nick }}</h3>
+        <p>
+            {{ message.value }}
+        </p>
+    </div>
+</div>
