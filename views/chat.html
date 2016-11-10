@@ -1,14 +1,22 @@
-<h1>Olá {{ user.nick }}</h1>
-<div>
-    <div ng-repeat="message in messages">
-        <h3>{{ message.user.nick }}</h3>
-        <p>
-            {{ message.value }}
-        </p>
-    </div>
-</div>
+<section id="chat">
+	<header class="chat-header">
+		<h1 class="user-name">Olá {{ user.nick }}</h1>
+	</header>
+	<div class="messages">
+		<div ng-repeat="message in messages" class="item-message">
+			<div class="box-message">
+				<span class="message-user">{{ message.user.nick }}</span>
+				<p class="message-content">
+					{{ message.value }}
+				</p>
+			</div>
+	    </div>
+	</div>
 
-<div style="width:100%; position:fixed; bottom:0; left:0;">
-    <textarea ng-model="newmessage.value" style="width: 90%; background-color: black; color: #FFF" ng-keypress="($event.keyCode == 13 && $event.shiftKey) ? sendMessage() : 0"></textarea>
-    <button ng-click="sendMessage()" style="vertical-align:top;">Enviar</button>
-</div>
+	<div class="send-message">
+		<input ng-model="newmessage.value" ng-keypress="($event.which === 13) ? sendMessage() : 0" placeholder="Digite sua mensagem"></input>
+		<button ng-click="sendMessage()">
+			<i class="fa fa-location-arrow"></i>
+		</button>
+	</div>
+</section>
