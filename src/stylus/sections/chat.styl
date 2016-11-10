@@ -1,0 +1,69 @@
+section#chat
+	size 100
+	font-family 'Roboto Condensed', sans-serif
+	height 100%
+	header.chat-header
+		size 100
+		background-color alpha(#000, 0.1)
+		height 10%
+		padding 8px 0
+		text-align center
+		h1.user-name
+			size 100
+			padding 0
+			margin 0
+			font-size 26px
+			color #0E0D0D
+	.messages
+		size 100
+		height 81%
+		overflow-y auto
+		padding-bottom 10px
+		.item-message
+			size 100
+			padding-top distance = 7px
+			padding-bottom distance
+			height auto
+			.box-message
+				background-color alpha(#FFF, 0.7)
+				max-width 50%
+				padding distance
+				margin-left distance
+				border-radius 6px
+			span.message-user
+				padding 0
+				margin 0
+				color #008bcc
+				display block
+			p.message-content
+				padding 0
+				margin 0
+	.send-message
+		height 9%
+		size 100
+		position relative
+		input
+			size 100
+			background-color #008bcc
+			border 0
+			border-radius 0
+			resize none
+			color #FFF
+			padding 10px
+			height 100%
+		button
+			position absolute
+			top 0
+			right 0
+			height 100%
+			border-radius 0
+			border 0
+			cursor pointer
+			background-color alpha(#000, 0.2)
+			width 40px
+			color #FFF
+			i
+				transition all 250ms ease-in-out
+			&:hover
+				i
+					transform scale(1.4)
