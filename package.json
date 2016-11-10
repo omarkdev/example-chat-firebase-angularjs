@@ -27,6 +27,7 @@
   },
   "dependencies": {
     "angular": "^1.5.8",
+    "angular-animate": "^1.5.8",
     "angular-route": "^1.5.8",
     "angularfire": "^2.1.0",
     "firebase": "^3.5.3"
