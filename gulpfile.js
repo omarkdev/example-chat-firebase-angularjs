@@ -2,7 +2,8 @@ const gulp = require('gulp'),
     rename = require('gulp-rename'),
     uglify = require('gulp-uglify'),
     concat = require('gulp-concat'),
-    connect = require('gulp-connect');
+    connect = require('gulp-connect'),
+    stylus = require('gulp-stylus');
 
 gulp.task('js-vendor', function(){
     var filesVendor = [
@@ -40,6 +41,16 @@ gulp.task('connect', function(){
         root: 'public',
         port: 4000
     });
+});
+
+gulp.task('stylus', function () {
+    return gulp.src('src/assets/stylus/app.styl')
+        .pipe(stylus({
+            compress: true
+        }))
+        .pipe(rename('app.min.css'))
+        .pipe(gulp.dest('assets/css/'))
+        .pipe(connect.reload());
 });
 
 gulp.task('default', ['js-angular'], function(){
