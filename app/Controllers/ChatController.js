@@ -1,6 +1,6 @@
 $app.controller('ChatController', [
-    '$scope', 'UserFactory', '$location', '$firebaseArray',
-    function($scope, UserFactory, $location, $firebaseArray){
+    '$scope', 'UserFactory', '$location', '$firebaseArray', '$timeout',
+    function($scope, UserFactory, $location, $firebaseArray, $timeout){
         var userInfo = UserFactory.get();
 
         if(!userInfo || !userInfo.nick)
@@ -26,5 +26,12 @@ $app.controller('ChatController', [
             messages.$add(newMessage);
             $scope.newmessage.value = "";
         }
+
+        ref.on('value', function(messagesSnap){
+            $timeout(function() {
+                var scroller = document.getElementsByClassName("messages")[0];
+                scroller.scrollTop = scroller.scrollHeight;
+            }, 0, false);
+        });
     }
 ]);
