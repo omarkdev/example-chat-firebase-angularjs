@@ -50,7 +50,7 @@ gulp.task('stylus', function () {
             compress: true
         }))
         .pipe(rename('app.min.css'))
-        .pipe(gulp.dest('assets/css/'))
+        .pipe(gulp.dest('public/assets/css/'))
         .pipe(connect.reload());
 });
 
