@@ -10,6 +10,7 @@ gulp.task('js-vendor', function(){
         './node_modules/angular/angular.min.js',
         './node_modules/angular-route/angular-route.min.js',
         './node_modules/angularfire/dist/angularfire.min.js',
+        './node_modules/angular-animate/angular-animate.min.js',
     ];
 
     return gulp.src(filesVendor)
