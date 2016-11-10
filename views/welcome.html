@@ -1,3 +1,10 @@
-<h1>Bem vindo</h1>
-<input type="text" placeholder="Digite seu nome" ng-model="user.nick" ng-keypress="($event.which === 13) ? userLogin() : 0">
-<button ng-click="userLogin()">Entrar</button>
+<section id="welcome">
+	<h1 class="title-welcome">Bem vindo</h1>
+
+	<div class="block-input">
+		<input type="text" placeholder="Digite seu nome" ng-model="user.nick" ng-keypress="($event.which === 13) ? userLogin() : 0">
+		<button ng-click="userLogin()">
+			<i class="fa fa-location-arrow"></i>
+		</button>
+	</div>
+</section>
