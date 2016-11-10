@@ -1,0 +1,36 @@
+section#welcome
+	size 100
+	font-family 'Roboto Condensed', sans-serif
+	h1.title-welcome
+		size 100
+		padding 0 0 20px
+		margin 0
+		text-align center
+		color #474444
+	.block-input
+		size 100
+		position relative
+		input
+			size 100
+			background-color #008bcc
+			border-radius 0
+			border 0
+			color #FFF
+			height 40px
+			line-height @height
+			padding 0 50px 0 15px
+		button
+			position absolute
+			top 0
+			right 0
+			height 40px
+			background-color alpha(#000, 0.2)
+			border 0
+			cursor pointer
+			color #FFF
+			width 40px
+			i
+				transition all 250ms ease-in-out
+			&:hover
+				i
+					transform scale(1.4)
