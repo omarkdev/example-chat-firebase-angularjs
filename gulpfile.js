@@ -45,7 +45,7 @@ gulp.task('connect', function(){
 });
 
 gulp.task('stylus', function () {
-    return gulp.src('src/assets/stylus/app.styl')
+    return gulp.src('src/stylus/app.styl')
         .pipe(stylus({
             compress: true
         }))
@@ -61,9 +61,9 @@ gulp.task('default', ['js-angular', 'stylus'], function(){
     ], ['js-angular']);
 
     gulp.watch([
-        'src/assets/stylus/*.styl',
-        'src/assets/stylus/**/*.styl'
+        'src/stylus/*.styl',
+        'src/stylus/**/*.styl'
     ], ['stylus']);
-    
+
     gulp.start('connect');
 });
