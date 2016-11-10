@@ -54,11 +54,16 @@ gulp.task('stylus', function () {
         .pipe(connect.reload());
 });
 
-gulp.task('default', ['js-angular'], function(){
+gulp.task('default', ['js-angular', 'stylus'], function(){
     gulp.watch([
         'app/*.js',
         'app/**/*.js'
     ], ['js-angular']);
 
+    gulp.watch([
+        'src/assets/stylus/*.styl',
+        'src/assets/stylus/**/*.styl'
+    ], ['stylus']);
+    
     gulp.start('connect');
 });
